@@ -42,17 +42,17 @@ dependencies {
     compile 'com.squareup:otto:1.3.8'
 
     compile project(':ijkplayer-java')
-    compile project(':ijkplayer-exo')
+//    compile project(':ijkplayer-exo')
 
-    all32Compile project(':ijkplayer-armv5')
+//    all32Compile project(':ijkplayer-armv5')
     all32Compile project(':ijkplayer-armv7a')
-    all32Compile project(':ijkplayer-x86')
-
-    all64Compile project(':ijkplayer-armv5')
+//    all32Compile project(':ijkplayer-x86')
+//
+//    all64Compile project(':ijkplayer-armv5')
     all64Compile project(':ijkplayer-armv7a')
-    all64Compile project(':ijkplayer-arm64')
-    all64Compile project(':ijkplayer-x86')
-    all64Compile project(':ijkplayer-x86_64')
+//    all64Compile project(':ijkplayer-arm64')
+//    all64Compile project(':ijkplayer-x86')
+//    all64Compile project(':ijkplayer-x86_64')
 
     // armv5Compile project(':player-armv5')
     // armv7aCompile project(':player-armv7a')
