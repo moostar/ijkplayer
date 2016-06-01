@@ -54,4 +54,10 @@
         android:layout_height="match_parent"
         android:layout_gravity="right"
         android:background="@color/ijk_transparent_dark" />
+
+    <SurfaceView
+        android:id="@+id/sufaceview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </android.support.v4.widget.DrawerLayout>
