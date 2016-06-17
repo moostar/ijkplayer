@@ -877,7 +877,8 @@ VideoToolBoxContext* init_videotoolbox(FFPlayer* ffp, AVCodecContext* ic)
                     context_vtb->m_convert_3byteTo4byteNALSize = true;
                 }
 
-                if(extradata[0] != 0x61 && extradata[1] != 0x61 && extradata[2] != 0x61 && extradata[3] != 0x61)
+//                if(extradata[0] != 0x61 && extradata[1] != 0x61 && extradata[2] != 0x61 && extradata[3] != 0x61)
+                  if(extradata[0] != 0x61 && extradata[1] != 0x76 && extradata[2] != 0x63 && extradata[3] != 0x43)
                 {
                     uint8_t data[256] = {0};
                     uint32_t datasize = extrasize + 4;
