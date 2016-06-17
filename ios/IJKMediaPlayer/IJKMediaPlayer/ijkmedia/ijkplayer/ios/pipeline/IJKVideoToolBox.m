@@ -877,7 +877,24 @@ VideoToolBoxContext* init_videotoolbox(FFPlayer* ffp, AVCodecContext* ic)
                     context_vtb->m_convert_3byteTo4byteNALSize = true;
                 }
 
-                context_vtb->m_fmt_desc = CreateFormatDescriptionFromCodecData(IJK_VTB_FCC_AVC1, width, height, extradata, extrasize,  IJK_VTB_FCC_AVC);
+                if(extradata[0] != 0x61 && extradata[1] != 0x61 && extradata[2] != 0x61 && extradata[3] != 0x61)
+                {
+                    uint8_t data[256] = {0};
+                    uint32_t datasize = extrasize + 4;
+                    data[0] = 0x61;
+                    data[1] = 0x76;
+                    data[2] = 0x63;
+                    data[3] = 0x43;
+                    if(extrasize + 4 < 256)
+                    {
+                        memcpy(data+4, extradata, extrasize);
+                        context_vtb->m_fmt_desc = CreateFormatDescriptionFromCodecData(IJK_VTB_FCC_AVC1, width, height, data, datasize,  IJK_VTB_FCC_AVC);
+                    }
+                }
+                else
+                {
+                    context_vtb->m_fmt_desc = CreateFormatDescriptionFromCodecData(IJK_VTB_FCC_AVC1, width, height, extradata, extrasize,  IJK_VTB_FCC_AVC);
+                }
 
                 ALOGI("%s - using avcC atom of size(%d), ref_frames(%d)", __FUNCTION__, extrasize, context_vtb->m_max_ref_frames);
             } else {
