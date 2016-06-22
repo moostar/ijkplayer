@@ -40,6 +40,8 @@ public class YjMediaPlayer {
 
     private boolean isSupportMediaCodec = false;
 
+    private static boolean isDebug = false;
+
     private class OnMediaCodecSelectListener extends IjkMediaPlayer.DefaultMediaCodecSelector {
         @Override
         public String onMediaCodecSelect(IMediaPlayer mp, String mimeType, int profile, int level) {
@@ -65,7 +67,7 @@ public class YjMediaPlayer {
             @Override
             public boolean onError(IMediaPlayer mp, int what, int extra) {
                 if (mOnErrorListener != null) {
-                    mOnErrorListener.onError(YjMediaPlayer.this, what, extra);
+                    return mOnErrorListener.onError(YjMediaPlayer.this, what, extra);
                 }
                 return false;
             }
@@ -211,6 +213,10 @@ public class YjMediaPlayer {
             IjkMediaPlayer.loadLibrariesOnce(null);
             IjkMediaPlayer.native_profileBegin("libijkplayer.so");
             IjkMediaPlayer.native_setLogLevel(IjkMediaPlayer.IJK_LOG_DEBUG);
+            isDebug = true;
+        } else {
+            isDebug = false;
+            IjkMediaPlayer.native_setLogLevel(IjkMediaPlayer.IJK_LOG_DEFAULT);
         }
     }
 
