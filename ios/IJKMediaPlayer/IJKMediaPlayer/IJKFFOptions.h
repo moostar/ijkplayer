@@ -22,6 +22,10 @@
 
 #import <Foundation/Foundation.h>
 
+#ifndef DEBUG
+#define NSLog(...) {}
+#endif
+
 typedef enum IJKFFOptionCategory {
     kIJKFFOptionCategoryFormat = 1,
     kIJKFFOptionCategoryCodec  = 2,
