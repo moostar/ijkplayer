@@ -29,6 +29,7 @@
 #import "IJKAudioKit.h"
 #import "IJKNotificationManager.h"
 #import "NSString+IJKMedia.h"
+#import "IJKNSLog.h"
 
 #include "string.h"
 #include "ijkplayer/version.h"

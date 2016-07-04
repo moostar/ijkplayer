@@ -24,6 +24,7 @@
 
 #import "IJKSDLAudioQueueController.h"
 #import "IJKSDLAudioKit.h"
+#import "IJKNSLog.h"
 
 #import <AVFoundation/AVFoundation.h>
 

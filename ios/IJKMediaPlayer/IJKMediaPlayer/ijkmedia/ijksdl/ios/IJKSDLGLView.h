@@ -26,9 +26,6 @@
 
 #include "ijksdl/ijksdl_vout.h"
 
-#ifndef DEBUG
-#define NSLog(...) {}
-#endif
 
 @interface IJKSDLGLView : UIView
 

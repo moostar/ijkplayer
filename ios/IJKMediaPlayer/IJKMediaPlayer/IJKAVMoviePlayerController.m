@@ -74,6 +74,7 @@
 #import "IJKMediaUtils.h"
 #import "IJKKVOController.h"
 #import "IJKNotificationManager.h"
+#import "IJKNSLog.h"
 #include "ijksdl/ios/ijksdl_ios.h"
 
 // avoid float equal compare
