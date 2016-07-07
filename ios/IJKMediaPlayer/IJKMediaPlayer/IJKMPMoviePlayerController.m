@@ -23,6 +23,8 @@
 #import "IJKMPMoviePlayerController.h"
 #import "IJKAudioKit.h"
 #import "IJKNotificationManager.h"
+#import "IJKNSLog.h"
+
 
 @implementation IJKMPMoviePlayerController
 {

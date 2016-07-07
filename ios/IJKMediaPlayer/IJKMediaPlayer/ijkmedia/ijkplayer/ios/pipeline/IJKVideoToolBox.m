@@ -34,6 +34,7 @@
 #import <CoreVideo/CVHostTime.h>
 #import <Foundation/Foundation.h>
 #import "IJKDeviceModel.h"
+#import "IJKNSLog.h"
 
 #define IJK_VTB_FCC_AVC    SDL_FOURCC('C', 'c', 'v', 'a')
 #define IJK_VTB_FCC_ESD    SDL_FOURCC('s', 'd', 's', 'e')

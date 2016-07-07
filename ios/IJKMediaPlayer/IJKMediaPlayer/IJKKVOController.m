@@ -21,6 +21,8 @@
  */
 
 #import "IJKKVOController.h"
+#import "IJKNSLog.h"
+
 
 @interface IJKKVOEntry : NSObject
 @property(nonatomic, weak)   NSObject *observer;

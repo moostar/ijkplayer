@@ -27,6 +27,8 @@
 #include "ijksdl/ijksdl_log.h"
 
 #import <AVFoundation/AVFoundation.h>
+#import "IJKNSLog.h"
+
 
 @implementation IJKSDLAudioUnitController {
     AudioUnit _auUnit;

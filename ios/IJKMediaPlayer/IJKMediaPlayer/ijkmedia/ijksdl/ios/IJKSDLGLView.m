@@ -27,6 +27,7 @@
 #include "ijksdl/ios/ijksdl_ios.h"
 #include "ijksdl/ijksdl_gles2.h"
 #import "IJKSDLHudViewController.h"
+#import "IJKNSLog.h"
 
 @interface IJKSDLGLView()
 @property(atomic,strong) NSRecursiveLock *glActiveLock;
